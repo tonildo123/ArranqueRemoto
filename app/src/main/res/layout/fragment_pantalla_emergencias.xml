@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantallaEmergencias">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonPolicia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/policia"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonAmbulancia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ambulancia"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonBomberos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bomberos"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+</LinearLayout>

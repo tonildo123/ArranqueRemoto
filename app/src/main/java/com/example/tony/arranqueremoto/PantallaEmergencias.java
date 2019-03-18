@@ -30,6 +30,8 @@ public class PantallaEmergencias extends Fragment {
         b2 = (Button)vista.findViewById(R.id.buttonAmbulancia);
         b3 = (Button)vista.findViewById(R.id.buttonBomberos);
 
+
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +54,6 @@ public class PantallaEmergencias extends Fragment {
                 }
             }
         });
-
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,6 +67,17 @@ public class PantallaEmergencias extends Fragment {
         });
 
         return vista;
+    }
+
+    public void funcionLLamar(View vista) {
+        switch (vista.getId()){
+
+
+
+
+        }
+
+
     }
 
 }

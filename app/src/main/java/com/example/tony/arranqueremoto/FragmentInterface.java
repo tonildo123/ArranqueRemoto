@@ -3,6 +3,8 @@ package com.example.tony.arranqueremoto;
 
 import android.content.ComponentName;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.telephony.PhoneNumberUtils;
@@ -11,81 +13,96 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
+import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FragmentInterface extends Fragment {
-    private String num = "3814757398";
+    //Operations op;
+    private Button bIng, bReg;
 
     private EditText usua, contra;
-    private Button ingresar, registrarme, wathsapp, emergencia, mi_ubicacion;
-
-
+    dbRegistro mi_base_de_datos;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View vista = inflater.inflate(R.layout.fragment_fragment_interface, container, false);
+        final View vista = inflater.inflate(R.layout.fragment_fragment_interface, container, false);
         usua= (EditText)vista.findViewById(R.id.usuario);
         contra = (EditText)vista.findViewById(R.id.password);
+        bIng = (Button)vista.findViewById(R.id.bIngresar2);
+        bReg = (Button)vista.findViewById(R.id.bRegistrarme);
+        mi_base_de_datos = new dbRegistro(getContext(),"" , null, 1);
 
-
-        ingresar = (Button)vista.findViewById(R.id.bIngresar);
-        registrarme = (Button)vista.findViewById(R.id.bRegistrarme);
-        emergencia = (Button)vista.findViewById(R.id.bEmergencias);
-        wathsapp = (Button)vista.findViewById(R.id.bContactos);
-        mi_ubicacion  = (Button)vista.findViewById(R.id.bBuscar);
-
-        ingresar.setOnClickListener(new View.OnClickListener() {
+        bIng.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PantallaPrincipal pp = new PantallaPrincipal();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contenedorPrincipal, pp)
-                        .addToBackStack(null).commit();
+      //           op.boton(v.getId());
+                String usuarioC = usua.getText().toString();
+                dbRegistro admin = new dbRegistro(getContext(),
+
+                        "arranqueremoto.db", null, 1);
+                SQLiteDatabase bd = admin.getReadableDatabase();
+
+                Cursor fila = bd.rawQuery("select * from registro where usuario = " + usuarioC, null);
+
+                usua.setText("");
+                contra.setText("");
+
+                if (fila != null) {
+                    if(fila.moveToFirst()){
+                        botones(v.getId());
+                        fila.close();
+                        bd.close();
+                    }
+                    else
+
+                        Toast.makeText(getContext(), "No existe ningún registro con ese usuario ",
+
+                                Toast.LENGTH_SHORT).show();
+
+                }
+
+
+
+           }
+        });
+        bReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                botones(v.getId());
+
 
             }
         });
-        registrarme.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Registrarme reg = new Registrarme();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contenedorPrincipal, reg)
-                        .addToBackStack(null).commit();
-            }
-        });
-        emergencia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PantallaEmergencias pe = new PantallaEmergencias();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contenedorPrincipal, pe)
-                        .addToBackStack(null).commit();
-            }
-        });
-        mi_ubicacion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent pasar = new Intent(getActivity(), MapsActivity.class);
-                getActivity().startActivity(pasar);
-            }
-        });
-        wathsapp.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                Intent _intencion = new Intent("android.intent.action.MAIN");
-                _intencion.setComponent(new ComponentName("com.whatsapp","com.whatsapp.Conversation"));
-                _intencion.putExtra("jid", PhoneNumberUtils.stripSeparators("54" +num )
-                        +"@s.whatsapp.net");
-                getActivity().startActivity(_intencion);
-            }
-        });
-
 
         return vista ;
     }
 
+    public void botones(int id) {
+
+        switch(id){
+            case R.id.bRegistrarme:
+
+                Registrarme reg = new Registrarme();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.contenedorPrincipal, reg)
+                        .addToBackStack(null).commit();
+                break;
+            case R.id.bIngresar2:
+                getActivity().getSupportFragmentManager().beginTransaction().
+                        replace(R.id.contenedorPrincipal, new PantallaPrincipal())
+                        .addToBackStack(null).commit();
+                break;
+
+        }
+
+    }
+
+
 }
+
+

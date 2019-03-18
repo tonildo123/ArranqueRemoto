@@ -13,66 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.80"
-        android:background="#424949"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.77"
-            android:background="@drawable/ingresosss"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bBuscar"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:drawable/ic_menu_compass"
-                android:text="BUSCAR MI VEHICULO"
-                android:textColor="@color/common_google_signin_btn_text_dark_default"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.77"
-            android:background="@drawable/ingresosss"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bEmergencias"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:drawable/sym_action_call"
-                android:text="EMERGENCIAS"
-                android:textColor="@color/common_google_signin_btn_text_dark_default"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.77"
-            android:background="@drawable/ingresosss"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/bContactos"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:drawable/sym_action_chat"
-                android:text="Wathsapp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.80"
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
@@ -118,7 +58,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/bIngresar"
+            android:id="@+id/bIngresar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="INGRESAR" />

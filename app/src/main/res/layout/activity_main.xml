@@ -7,7 +7,45 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:background="#424949"
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/bIngresar"
+        android:layout_width="match_parent"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:background="@drawable/ingresosss"
+        android:text="INGRESAR" />
+
+    <Button
+        android:id="@+id/bSoporte"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:layout_weight="0.75"
+        android:background="@drawable/ingresosss"
+        android:text="SOPORTE" />
+
+    <Button
+        android:id="@+id/bBuscar"
+        android:layout_width="match_parent"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:background="@android:drawable/ic_menu_compass"
+        android:text="BUSCAR MI VEHICULO"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/bEmergencias"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:background="@drawable/ingresosss"
+        android:text="EMERGENCIAS"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="16sp" />
 </LinearLayout>

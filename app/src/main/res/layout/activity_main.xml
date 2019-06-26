@@ -14,38 +14,44 @@
     <Button
         android:id="@+id/bIngresar"
         android:layout_width="match_parent"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:layout_height="match_parent"
         android:layout_weight="0.75"
-        android:background="@drawable/ingresosss"
-        android:text="INGRESAR" />
+        android:background="@drawable/estilo_boton_redondeado"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/button_ingresar"
+        android:textColor="#000000"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/bSoporte"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:layout_weight="0.75"
-        android:background="@drawable/ingresosss"
-        android:text="SOPORTE" />
+        android:background="@drawable/estilo_boton_redondeado"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/button_wathsapp"
+        android:textColor="#000000"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/bBuscar"
         android:layout_width="match_parent"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:layout_height="match_parent"
         android:layout_weight="0.75"
-        android:background="@android:drawable/ic_menu_compass"
-        android:text="BUSCAR MI VEHICULO"
-        android:textSize="18sp" />
+        android:background="@drawable/estilo_boton_redondeado"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/button_buscar_mi_vehivulo"
+        android:textColor="#000000"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/bEmergencias"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.75"
-        android:background="@drawable/ingresosss"
-        android:text="EMERGENCIAS"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="16sp" />
+        android:background="@drawable/estilo_boton_redondeado"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/button_emergencias"
+        android:textColor="#000000"
+        android:textSize="24sp" />
 </LinearLayout>

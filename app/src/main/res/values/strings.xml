@@ -6,6 +6,20 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
+    <string name="button_ingresar">INGRESAR</string>
+    <string name="button_wathsapp">WATHSAPP</string>
+    <string name="button_emergencias">EMERGENCIAS</string>
+    <string name="button_buscar_mi_vehivulo">BUSCAR MI VEHICULO</string>
+
+    <string name="ET_USUARIO">USUARIO</string>
+    <string name="ET_CONTRASE">CONTRASEÑA</string>
+    <string name="ET_REP_CONTRA">REPETIR CONTRASEÑA</string>
+    <string name="button_registrarme">REGISTRARME</string>
+
+    <string name="button_BLUETOOTH">CONECTAR BLUETOOTH</string>
+    <string name="button_ARRANCAR">ARRANCAR</string>
+    <string name="button_APAGAR">APAGAR</string>
+
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>

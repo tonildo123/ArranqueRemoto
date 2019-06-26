@@ -1,26 +1,22 @@
 package com.example.tony.arranqueremoto;
 
-import android.Manifest;
-import android.app.FragmentManager;
 import android.content.ComponentName;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.PhoneNumberUtils;
 import android.view.View;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
+
+
+import com.example.tony.arranqueremoto.Vistas.MapsActivity;
+import com.example.tony.arranqueremoto.Vistas.PantallaPrincipal;
+import static com.example.tony.arranqueremoto.R.id.bEmergencias;
+import static com.example.tony.arranqueremoto.R.id.bIngresar;
+
 
 public class MainActivity extends AppCompatActivity {
-
-    final int codigo_de_repuesta_escritura = 0;
-    private  Button b1, b3, b4, b5;
-    // UI references.
-
+    private Button buscar, emergencia, wathsapp, login;
 
 
     android.support.v4.app.FragmentManager manejador = getSupportFragmentManager();
@@ -29,52 +25,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        b5 = (Button)findViewById(R.id.bEmergencias);
-        b4 = (Button)findViewById(R.id.bBuscar);
-        b3 = (Button)findViewById(R.id.bSoporte);
-        b1 = (Button)findViewById(R.id.bIngresar);
-        // permisos y parametros necesario para mostar mi posicion
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-            if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
-                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                        codigo_de_repuesta_escritura);
-            }
-        }
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                botones(v.getId());
-            }
-        });
-        b3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                botones(v.getId());
-            }
-        });
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                botones(v.getId());
-            }
-        });
-        b5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                botones(v.getId());
-            }
-        });
+        wathsapp =(Button)findViewById(R.id.bSoporte);
+        buscar =(Button)findViewById(R.id.bBuscar);
+        emergencia =(Button)findViewById(R.id.bEmergencias);
+        login =(Button)findViewById(R.id.bIngresar);
 
-
-        //manejador.beginTransaction().replace(R.id.contenedorPrincipal, new FragmentInterface()).commit();
+        wathsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presentador_del_main(v.getId());
+            }
+        });
+        buscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presentador_del_main(v.getId());
+            }
+        });
+        emergencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presentador_del_main(v.getId());
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presentador_del_main(v.getId());
+            }
+        });
 
 
     }
+    public void presentador_del_main(int button){
 
-    public void botones(int boton) {
-        switch(boton){
-
+        switch (button){
             case R.id.bSoporte:
                 String num = "3814757398";
                 Intent _intencion = new Intent("android.intent.action.MAIN");
@@ -85,17 +70,19 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.bBuscar:
                 Intent pasar = new Intent(MainActivity.this, MapsActivity.class);
-                startActivity(pasar);;
+                startActivity(pasar);
                 break;
-            case R.id.bEmergencias:
-                manejador.beginTransaction().replace(R.id.contenedorPrincipal, new PantallaEmergencias()).commit();
+            case bIngresar:
+                manejador.beginTransaction().replace(R.id.contenedorPrincipal, new PantallaPrincipal()).addToBackStack(null).commit();
                 break;
-            case R.id.bIngresar:
-                manejador.beginTransaction().replace(R.id.contenedorPrincipal, new FragmentInterface()).commit();
+            case bEmergencias:
+                manejador.beginTransaction().replace(R.id.contenedorPrincipal, new PantallaPrincipal()).addToBackStack(null).commit();
                 break;
-
         }
 
     }
 
 }
+
+
+

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FragmentInterface">
+    tools:context=".Vistas.FragmentInterface">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -27,7 +27,8 @@
                 android:drawableRight="@android:drawable/ic_menu_myplaces"
                 android:ems="10"
                 android:hint="USUARIO"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -45,7 +46,8 @@
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColor="#FFFFFF" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -61,12 +63,14 @@
             android:id="@+id/bIngresar2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/estilo_boton_redondeado"
             android:text="INGRESAR" />
 
         <Button
             android:id="@+id/bRegistrarme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/estilo_boton_redondeado"
             android:text="REGISTRARME"
             android:textColor="@color/colorPrimaryDark" />
     </LinearLayout>

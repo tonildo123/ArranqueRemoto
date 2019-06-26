@@ -1,4 +1,4 @@
-package com.example.tony.arranqueremoto;
+package com.example.tony.arranqueremoto.Vistas;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -7,6 +7,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.example.tony.arranqueremoto.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;

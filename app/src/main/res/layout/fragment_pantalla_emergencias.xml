@@ -4,13 +4,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PantallaEmergencias">
+    tools:context=".Vistas.PantallaEmergencias">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.75"
+        android:layout_weight="0.70"
         android:orientation="vertical">
 
         <Button
@@ -24,7 +24,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.75"
+        android:layout_weight="0.70"
         android:orientation="vertical">
 
         <Button
@@ -38,7 +38,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.75"
+        android:layout_weight="0.70"
         android:orientation="vertical">
 
         <Button
@@ -47,6 +47,8 @@
             android:layout_height="match_parent"
             android:background="@drawable/bomberos"
             android:textSize="30sp" />
+
+
     </LinearLayout>
 
 </LinearLayout>

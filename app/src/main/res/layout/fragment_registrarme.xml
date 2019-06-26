@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#424949"
     android:orientation="vertical"
-    tools:context=".Registrarme">
+    tools:context=".Vistas.Registrarme">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -14,9 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
-        android:background="@drawable/registrosss"
+        android:background="@color/common_google_signin_btn_text_light_focused"
         android:gravity="bottom"
-        android:text="USUARIO"
+        android:text="@string/ET_USUARIO"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="24sp" />
 
@@ -36,9 +36,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
-        android:background="@drawable/registrosss"
+        android:background="@color/common_google_signin_btn_text_light_focused"
         android:gravity="bottom"
-        android:text="CONTRASEÑA"
+        android:text="@string/ET_CONTRASE"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textColorLink="@color/colorPrimary"
         android:textSize="24sp" />
@@ -59,9 +59,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
-        android:background="@drawable/registrosss"
+        android:background="@color/common_google_signin_btn_text_light_focused"
         android:gravity="bottom"
-        android:text="REPETIR CONTRASEÑA"
+        android:text="@string/ET_REP_CONTRA"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
         android:textSize="24sp" />
 
@@ -81,7 +81,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.80"
-        android:background="@drawable/registrosss"
-        android:text="REGISTRARME"
+        android:background="@color/common_google_signin_btn_text_light_focused"
+        android:text="@string/button_registrarme"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.tony.arranqueremoto;
+package com.example.tony.arranqueremoto.Vistas;
 
 
 import android.content.Intent;
@@ -9,14 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.tony.arranqueremoto.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class PantallaPrincipal extends Fragment {
 
-    android.support.v4.app.FragmentManager manejador = getFragmentManager();
-    private Button buscar, apagar, arrancar, conectar, emergencias;
+    private Button apagar, arrancar, conectar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

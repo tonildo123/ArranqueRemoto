@@ -10,7 +10,9 @@ import android.widget.Button;
 
 
 import com.example.tony.arranqueremoto.Vistas.MapsActivity;
-import com.example.tony.arranqueremoto.Vistas.PantallaPrincipal;
+import com.example.tony.arranqueremoto.Vistas.PresentarLogin;
+import com.example.tony.arranqueremoto.Vistas.presentarEmergencias;
+
 import static com.example.tony.arranqueremoto.R.id.bEmergencias;
 import static com.example.tony.arranqueremoto.R.id.bIngresar;
 
@@ -73,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(pasar);
                 break;
             case bIngresar:
-                manejador.beginTransaction().replace(R.id.contenedorPrincipal, new PantallaPrincipal()).addToBackStack(null).commit();
+                manejador.beginTransaction().replace(R.id.contenedorPrincipal, new PresentarLogin()).addToBackStack(null).commit();
                 break;
             case bEmergencias:
-                manejador.beginTransaction().replace(R.id.contenedorPrincipal, new PantallaPrincipal()).addToBackStack(null).commit();
+                manejador.beginTransaction().replace(R.id.contenedorPrincipal, new presentarEmergencias()).addToBackStack(null).commit();
                 break;
         }
 

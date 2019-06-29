@@ -14,10 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
-        android:background="@color/common_google_signin_btn_text_light_focused"
-        android:gravity="bottom"
+        android:background="@drawable/estilo_boton_redondeado"
+        android:gravity="bottom|center_horizontal|center_vertical"
         android:text="@string/ET_USUARIO"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColor="#1A0101"
         android:textSize="24sp" />
 
     <EditText
@@ -27,7 +27,9 @@
         android:layout_weight="0.85"
         android:background="#626567"
         android:ems="10"
+        android:hint="@string/ET_USUARIO"
         android:inputType="textPersonName"
+        tools:ignore="Autofill"
         android:textColor="@android:color/darker_gray"
         android:textColorLink="@color/colorPrimary" />
 
@@ -36,11 +38,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
-        android:background="@color/common_google_signin_btn_text_light_focused"
-        android:gravity="bottom"
+        android:background="@drawable/estilo_boton_redondeado"
+        android:gravity="bottom|center_horizontal|center_vertical"
         android:text="@string/ET_CONTRASE"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textColorLink="@color/colorPrimary"
+        android:textColor="#1A0101"
         android:textSize="24sp" />
 
     <EditText
@@ -50,6 +51,8 @@
         android:layout_weight="0.85"
         android:background="#626567"
         android:ems="10"
+        tools:ignore="Autofill"
+        android:hint="@string/ET_CONTRASE"
         android:inputType="textPersonName"
         android:textColor="@android:color/darker_gray"
         android:textColorLink="@color/colorPrimary" />
@@ -59,10 +62,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
-        android:background="@color/common_google_signin_btn_text_light_focused"
-        android:gravity="bottom"
+        android:background="@drawable/estilo_boton_redondeado"
+        android:gravity="bottom|center_horizontal|center_vertical"
         android:text="@string/ET_REP_CONTRA"
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColor="#1A0101"
         android:textSize="24sp" />
 
     <EditText
@@ -72,6 +75,8 @@
         android:layout_weight="0.85"
         android:background="#626567"
         android:ems="10"
+        tools:ignore="Autofill"
+        android:hint="@string/ET_CONTRASE"
         android:inputType="textPersonName"
         android:textColor="@android:color/darker_gray"
         android:textColorLink="@color/colorPrimary" />
@@ -81,7 +86,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.80"
-        android:background="@color/common_google_signin_btn_text_light_focused"
+        android:background="@drawable/estilo_boton_redondeado"
         android:text="@string/button_registrarme"
-        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+        android:textColor="#1A0101" />
+
+
 </LinearLayout>

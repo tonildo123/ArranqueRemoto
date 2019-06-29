@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Vistas.FragmentInterface">
+    tools:context=".Vistas.PresentarLogin">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -24,11 +25,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableRight="@android:drawable/ic_menu_myplaces"
                 android:ems="10"
-                android:hint="USUARIO"
+                android:hint="@string/ET_USUARIO"
                 android:inputType="textPersonName"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                tools:ignore="Autofill" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -39,15 +41,16 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableRight="@android:drawable/ic_partial_secure"
-                android:hint="CONTRASEÑA"
+                android:hint="@string/ET_CONTRASE"
                 android:imeActionId="6"
                 android:imeActionLabel="@string/action_sign_in_short"
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
                 android:maxLines="1"
                 android:singleLine="true"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                tools:ignore="Autofill" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -64,14 +67,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/estilo_boton_redondeado"
-            android:text="INGRESAR" />
+            android:text="@string/button_ingresar" />
 
         <Button
             android:id="@+id/bRegistrarme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/estilo_boton_redondeado"
-            android:text="REGISTRARME"
+            android:text="@string/button_registrarme"
             android:textColor="@color/colorPrimaryDark" />
+
+        <ImageView
+            android:id="@+id/imagecaptura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription"
+            android:src="@drawable/capturallave" />
     </LinearLayout>
 </LinearLayout>
